@@ -28,6 +28,7 @@ class LoginController extends Controller
      * @var string
      */
     protected function redirectTo( ) {
+        
         if (Auth::check() && Auth::user()->role == 'mahasiswa') {
             return '/homemahasiswa';
         }
